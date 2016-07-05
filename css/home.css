@@ -1,0 +1,26 @@
+.descrizione{
+    width:40vw;
+    position: absolute;
+    top: 100px;
+    left:30vw;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+#dati{    
+    text-align: left; color:black;
+    width:50vw;
+    background-color: white;
+    position:absolute;
+    left:25vw;
+    top:150px;
+}
+
+#risposta{    
+    text-align: left; color:black;
+    width:50vw;
+    background-color: white;
+    position:absolute;
+    left:25vw;
+    top:400px;
+}
