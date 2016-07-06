@@ -21,7 +21,7 @@ class CHome {
         $dati=$VHome->getDati();         
          if($dati==true){
              $translator->delResult();
-             $m=$magic->idConverter($dati[0]);
+             $m=$translator->idConverter($dati[0]);
              $stringa='persona('.$m.').';
              $translator->ADDtoResult($stringa);
              $nome=[$dati[1],$dati[2],$m];
