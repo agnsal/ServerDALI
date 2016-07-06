@@ -41,19 +41,19 @@ class CHome {
              $computer=[$m,$dati[8]];
              $translator->ARRAYtoPpredicate($computer, "orepc");
              
-             $translator->RESULTtoPL("input","DALI/ServerDALImas", true);
-             $translator->notificationTXT("notifica", "DALI/ServerDALImas");
+             $translator->RESULTtoPL("input","ServerDALI/DALI/ServerDALImas", true);
+             $translator->notificationTXT("notifica", "ServerDALI/DALI/ServerDALImas");
 
-             while(file_exists("DALI/ServerDALImas/notificaermes.txt")==false){
+             while(file_exists("ServerDALI/DALI/ServerDALImas/notificaermes.txt")==false){
                  sleep(0.2);
              }
-             $dati = fopen("DALI/ServerDALImas/risposta.php", "r") or die("Unable to open file!");
-             eval(fread($dati,filesize("DALI/ServerDALImas/risposta.php")));
+             $dati = fopen("ServerDALI/DALI/ServerDALImas/risposta.php", "r") or die("Unable to open file!");
+             eval(fread($dati,filesize("ServerDALI/DALI/ServerDALImas/risposta.php")));
              fclose($dati);
              
-             unlink("DALI/ServerDALImas/risposta.php");
+             unlink("ServerDALI/DALI/ServerDALImas/risposta.php");
              
-             unlink("DALI/ServerDALImas/notificaermes.txt");
+             unlink("ServerDALI/DALI/ServerDALImas/notificaermes.txt");
              $VDati->mostraPagina($l_c,$f_c,$t,$s_c);            
              
          }
