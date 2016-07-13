@@ -47,9 +47,10 @@ class CHome {
              while(file_exists("DALI/ServerDALImas/notificaermes.txt")==false){
                  sleep(0.2);
              }
-             $dati = fopen("DALI/ServerDALImas/risposta.php", "r") or die("Unable to open file!");
-             eval(fread($dati,filesize("DALI/ServerDALImas/risposta.php")));
-             fclose($dati);
+             $risposta = fopen("DALI/ServerDALImas/risposta.php", "r") or die("Unable to open file!");
+             
+             eval(fread($risposta,filesize("DALI/ServerDALImas/risposta.php")));
+             fclose($risposta);
              
              unlink("DALI/ServerDALImas/risposta.php");
              
