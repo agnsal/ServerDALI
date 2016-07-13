@@ -28,6 +28,9 @@ class CHome {
              if($dati[5]==true){
                 $ha=[$m, 'animali'];
              }
+             else{
+                $ha=[$m,0];
+             }
              $translator->ARRAYtoPpredicate($ha, "ha");
              $colore=[$m,$dati[6]];
              $translator->ARRAYtoPpredicate($colore, "colorepreferito");
