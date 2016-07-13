@@ -54,7 +54,13 @@ class CHome {
              unlink("DALI/ServerDALImas/risposta.php");
              
              unlink("DALI/ServerDALImas/notificaermes.txt");
-             $VDati->mostraPagina($l_c,$f_c,$t,$s_c);            
+             
+             $lavoro=${'l_' . $m};
+             $felix=${'f_' . $m};
+             $tempo=${'t_' . $m};
+             $sagg=${'s_' . $m};
+             
+             $VDati->mostraPagina($lavoro,$felix,$tempo,$sagg);            
              
          }
          
