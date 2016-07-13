@@ -15,7 +15,7 @@
     </br>tempo 
         {if $tempo<0} impossibile
             {else} possibile
-        {/if}).
+        {/if}.
     </br>Mnemosine 
         {if $lavoro==="0"} non ha riscontrato alcun incarico
              {else} ha riscontrato l'incarico {$lavoro}
