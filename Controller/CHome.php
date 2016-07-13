@@ -45,21 +45,22 @@ class CHome {
              while(file_exists("DALI/ServerDALImas/notificaermes.txt")==false){
                  sleep(0.2);
              }
+             
              $risposta = fopen("DALI/ServerDALImas/risposta.php", "r") or die("Unable to open file!");
              
-             eval(fread($risposta,filesize("DALI/ServerDALImas/risposta.php")));
-             fclose($risposta);
+             if($risposta==true){
+                 eval(fread($risposta,filesize("DALI/ServerDALImas/risposta.php")));
+                 fclose($risposta);
              
-             unlink("DALI/ServerDALImas/risposta.php");
+                 unlink("DALI/ServerDALImas/risposta.php");
+                 unlink("DALI/ServerDALImas/notificaermes.txt");
              
-             unlink("DALI/ServerDALImas/notificaermes.txt");
-             
-             $lavoro=${'l_' . $m};
-             $felix=${'f_' . $m};
-             $tempo=${'t_' . $m};
-             $sagg=${'s_' . $m};
-             
-             $VDati->mostraPagina($lavoro,$felix,$tempo,$sagg);            
+                 $lavoro=${'l_' . $m};
+                 $felix=${'f_' . $m};
+                 $tempo=${'t_' . $m};
+                 $sagg=${'s_' . $m};
+                 $VDati->mostraPagina($lavoro,$felix,$tempo,$sagg);  
+             }
              
          }
          
