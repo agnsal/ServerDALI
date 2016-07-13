@@ -12,7 +12,7 @@
            {else} giuste
         {/if}.
     </br>Crono ha elaborato {$tempo} come tempo di viaggio.
-    </br>Il tempo di viaggio è 
+    </br>Tempo 
         {if $tempo<0} impossibile
             {else} possibile
         {/if}
